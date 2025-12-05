@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   console.log('env carregado:', env);
   return {
     plugins: [react()],
-    base: './',
+    base: '/',
     define: {
       'import.meta.env' : JSON.stringify(env)
     },
