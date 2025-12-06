@@ -1,11 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <title>404</title>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
+    <title>404 • Página não encontrada</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      /* Opcional: evita flash visual enquanto o script faz o fallback */
+      html,body{height:100%;margin:0}
+      #spa-fallback{display:flex;align-items:center;justify-content:center;height:100%;font-family:Arial,Helvetica,sans-serif;color:#666}
+    </style>
   </head>
   <body>
+    <div id="spa-fallback">Redirecionando...</div>
+
+    <script>
+      /**
+       * Fallback SPA para GitHub Pages.
+       * Busca o index.html do site e o injeta na página, mantendo
+       * a URL atual para que o react-router (BrowserRouter) processe a rota.
+       */
+      (function () {
+        var path = location.pathname + location.search + location.hash;
+
+        // Ajuste aqui se seu index estiver em subpasta (normalmente não)
+        var indexPath = "/index.html";
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", indexPath);
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 400) {
+            // Insere o index.html carregado no documento atual
+            document.open();
+            document.write(xhr.responseText);
+            document.close();
+
+            // Mantém a URL original no histórico para que o Router reconheça a rota
+            history.replaceState({}, "", path);
+          } else {
+            // Se falhar, cai para a home — fallback final
+            location.replace("/");
+          }
+        };
+        xhr.onerror = function () {
+          location.replace("/");
+        };
+        xhr.send();
+      })();
+    </script>
   </body>
 </html>
 
