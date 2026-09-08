@@ -3,6 +3,9 @@ import MotorAP from "./pages/motorap";
 import Upsell from "./pages/Upsell";
 import CarroAntigo from "./pages/carroantigo";
 import Upsell_ca from "./pages/Upsell_ca";
+import AlemarcoMotor from "./pages/alemarcomotor";
+import "./styles/alemarco-motor-landing.css";
+
 
 export default function App() {
   return (
@@ -12,6 +15,7 @@ export default function App() {
         <Route path="/carroantigo" element={<CarroAntigo />} />
         <Route path="/upsell" element={<Upsell />} />
         <Route path="/upsell_ca" element={<Upsell_ca />} />
+        <Route path="/alemarco-motor" element={<AlemarcoMotor />} />
 
         {/* Opcional: rota principal */}
         <Route path="/" element={<MotorAP />} />

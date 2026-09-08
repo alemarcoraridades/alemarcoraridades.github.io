@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+
+/* Releitura DroxApp para Alemarco Motor: produto em primeiro plano, hero imersivo, painéis escuros, cantos discretos, linhas técnicas e CTA distribuído. */
+.drox-page { background:#080b0d; color:#f1f0ea; font-family:'Rajdhani',sans-serif; overflow:hidden; }
+.drox-nav { position:absolute; z-index:20; top:0; left:0; width:100%; height:78px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(22px,5vw,80px); border-bottom:1px solid rgba(241,240,234,.13); background:linear-gradient(180deg,rgba(5,7,8,.55),transparent); }
+.drox-brand { display:flex; align-items:center; gap:10px; font:600 16px 'Rajdhani'; letter-spacing:-.035em; }.drox-brand img { width:30px; height:30px; object-fit:cover; border-radius:8px; filter:grayscale(1); }.drox-nav nav { display:flex; gap:29px; margin-left:auto; margin-right:40px; }.drox-nav nav a,.drox-nav-cta { color:rgba(241,240,234,.62); font-size:10px; letter-spacing:.1em; text-transform:uppercase; transition:color .18s,transform .18s; }.drox-nav nav a:hover,.drox-nav-cta:hover { color:#f1f0ea; transform:translateY(-1px); }.drox-nav-cta { display:flex; align-items:center; gap:7px; color:#f1f0ea; }
+.drox-hero { min-height:860px; height:100svh; max-height:960px; background-size:cover; background-position:center; position:relative; display:flex; align-items:center; }.drox-hero__noise { position:absolute; inset:0; opacity:.12; background-image:radial-gradient(rgba(255,255,255,.28) .6px,transparent .6px); background-size:5px 5px; mix-blend-mode:screen; }.drox-hero__inner { position:relative; z-index:1; width:min(720px,90vw); margin:58px auto 0; text-align:center; }.drox-overline { display:block; color:#b4a071; font:10px 'Rajdhani'; letter-spacing:.16em; text-transform:uppercase; }.drox-hero h1,.drox-section h2,.drox-final h2 { font:500 clamp(47px,6.5vw,88px)/.94 'Rajdhani'; letter-spacing:-.08em; margin:22px 0; }.drox-hero h1 em,.drox-section h2 em,.drox-final h2 em { color:#c33d35; font-style:normal; }.drox-hero p { max-width:530px; margin:0 auto; color:rgba(241,240,234,.7); font-size:15px; line-height:1.7; }.drox-command { width:min(560px,100%); margin:32px auto 0; padding:10px; border:1px solid rgba(241,240,234,.27); border-radius:12px; background:rgba(4,6,7,.77); box-shadow:0 20px 55px rgba(0,0,0,.35); text-align:left; backdrop-filter:blur(8px); }.drox-command__top { display:flex; justify-content:space-between; padding:8px 10px 12px; color:#6f7976; font:9px 'Rajdhani'; letter-spacing:.1em; text-transform:uppercase; }.drox-command__top i { display:inline-block; width:6px; height:6px; margin-right:7px; border-radius:50%; background:#9cbc6d; box-shadow:0 0 0 4px rgba(156,188,109,.15); }.drox-command__input { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px; border-radius:7px; color:#e7e5de; background:#171d20; font-size:13px; }.drox-command__input svg { color:#c33d35; }.drox-chips { display:flex; gap:8px; flex-wrap:wrap; padding:10px 0 0; }.drox-chips button { border:1px solid rgba(241,240,234,.15); border-radius:100px; padding:9px 12px; color:#8c9591; background:transparent; font:10px 'Rajdhani'; cursor:pointer; }.drox-chips button:hover { color:#f1f0ea; border-color:#c33d35; }.drox-scroll { position:absolute; z-index:1; left:50%; bottom:28px; transform:translateX(-50%); display:flex; align-items:center; gap:9px; color:rgba(241,240,234,.55); font-size:10px; letter-spacing:.11em; text-transform:uppercase; }.drox-scroll:hover { color:#f1f0ea; }
+.drox-section { padding:clamp(90px,12vw,165px) clamp(22px,7vw,110px); }.drox-section-head { max-width:1100px; margin:0 auto 65px; }.drox-section-head--wide { display:grid; grid-template-columns:1fr 1fr; gap:30px 9vw; align-items:end; }.drox-section-head--wide .drox-overline { grid-column:1/-1; }.drox-section-head h2 { margin:20px 0 0; }.drox-section-head p { max-width:390px; margin-left:auto; color:#8c9591; line-height:1.7; font-size:14px; }.drox-modes { background:#e8e5de; color:#101416; }.drox-modes .drox-overline,.drox-product .drox-overline,.drox-video-section .drox-overline { color:#ae3d36; }.drox-section-head > p { color:#66706e; }.mode-grid { max-width:1100px; margin:auto; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }.mode-card { min-height:260px; padding:22px; display:flex; flex-direction:column; border:1px solid rgba(16,20,22,.18); background:#e8e5de; transition:transform .2s,background .2s; }.mode-card:hover { transform:translateY(-5px); background:#f2f0e9; }.mode-card__top { display:flex; align-items:center; justify-content:space-between; color:#ae3d36; }.mode-card__top span { font:10px 'Rajdhani'; letter-spacing:.14em; }.mode-card h3 { margin-top:auto; font:600 23px 'Rajdhani'; letter-spacing:-.05em; }.mode-card p { margin-top:12px; color:#69716e; font-size:13px; line-height:1.6; }.mode-card a { display:flex; align-items:center; gap:6px; margin-top:22px; color:#ae3d36; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+.drox-product { background:#111618; }.drox-product .drox-section-head p,.drox-video-section .drox-section-head p { color:#8c9591; }.proof-strip { max-width:1100px; margin:auto; display:grid; grid-template-columns:1.35fr .825fr .825fr; gap:12px; }.proof-main,.proof-side { position:relative; overflow:hidden; background:#1b2224; border:1px solid rgba(241,240,234,.12); }.proof-main img,.proof-side img { width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform .4s; }.proof-main:hover img,.proof-side:hover img { transform:scale(1.035); }.proof-main > div,.proof-side > div { padding:15px 16px 18px; }.proof-main span,.proof-side span { color:#c33d35; font:9px 'Rajdhani'; letter-spacing:.13em; }.proof-main strong,.proof-side strong { display:block; margin-top:7px; font:500 18px 'Rajdhani'; letter-spacing:-.04em; }.proof-side strong { font-size:16px; }
+.drox-video-section { background:#e8e5de; color:#101416; }.drox-video-section .drox-section-head p { color:#66706e; }.video-grid { max-width:1100px; margin:auto; display:grid; grid-template-columns:1.2fr .9fr .9fr; gap:14px; }.video-slot { min-width:0; }.video-frame { position:relative; aspect-ratio:16/9; overflow:hidden; background:#171d20; border:1px solid rgba(16,20,22,.25); }.video-frame img { width:100%; height:100%; object-fit:cover; filter:brightness(.72) saturate(.78); }.video-frame__veil { position:absolute; inset:0; background:linear-gradient(135deg,rgba(8,11,13,.2),rgba(8,11,13,.68)); }.video-play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:grid; place-items:center; width:55px; height:55px; border:1px solid rgba(241,240,234,.72); border-radius:50%; color:#f1f0ea; background:rgba(8,11,13,.5); cursor:pointer; transition:background .18s,transform .18s; }.video-play:hover { background:#c33d35; transform:translate(-50%,-50%) scale(1.08); }.video-placeholder { position:absolute; left:13px; bottom:12px; color:rgba(241,240,234,.68); font:9px 'Rajdhani'; letter-spacing:.12em; }.video-copy { padding:14px 2px; }.video-copy > span { color:#ae3d36; font:9px 'Rajdhani'; letter-spacing:.13em; }.video-copy h3 { margin-top:7px; font:500 20px 'Rajdhani'; letter-spacing:-.045em; }.video-copy p { margin-top:8px; color:#66706e; font-size:12px; line-height:1.55; }
+.drox-heritage { background:#0a0d0f; }.heritage-panel { max-width:1100px; margin:auto; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:8vw; }.heritage-panel h2 { font-size:clamp(42px,5.5vw,72px); }.heritage-panel p { max-width:390px; color:#8c9591; line-height:1.7; font-size:14px; }.heritage-panel img { width:100%; aspect-ratio:4/3; object-fit:cover; filter:saturate(.62); }.heritage-check { display:flex; align-items:center; gap:8px; margin-top:28px; color:#b8d295; font-size:12px; }
+.drox-final { padding:clamp(90px,12vw,165px) clamp(22px,7vw,110px); display:grid; grid-template-columns:1fr 300px; gap:50px; align-items:end; background:#c33d35; }.drox-final > div:first-child { max-width:650px; margin-left:max(0px,calc((100vw - 1100px)/2)); }.drox-final h2 { color:#fff5ef; }.drox-final h2 em { color:#301211; }.drox-final p { max-width:430px; color:#f3c6b7; line-height:1.7; }.drox-stores { display:flex; gap:10px; flex-wrap:wrap; margin-top:30px; }.drox-store { min-width:160px; padding:12px 14px; border:1px solid rgba(255,245,239,.5); color:#fff5ef; }.drox-store:hover { background:#fff5ef; color:#c33d35; }.drox-store small { display:block; font:8px 'Rajdhani'; letter-spacing:.12em; opacity:.7; }.drox-store strong { display:flex; justify-content:space-between; align-items:center; margin-top:6px; font:600 15px 'Rajdhani'; }.drox-final__mark { display:flex; flex-direction:column; gap:15px; align-items:flex-start; color:#f3c6b7; font:9px 'Rajdhani'; letter-spacing:.14em; }.drox-final__mark img { width:110px; height:110px; object-fit:cover; border-radius:18px; filter:grayscale(1); }.drox-footer { min-height:100px; display:flex; align-items:center; gap:25px; padding:25px clamp(22px,7vw,110px); color:#69726f; background:#080b0d; font-size:10px; }.drox-footer .drox-brand { color:#f1f0ea; margin-right:auto; }.drox-footer a:hover { color:#f1f0ea; }
+@media (max-width:800px) { .drox-nav nav { display:none; }.drox-hero { min-height:780px; }.drox-hero__inner { margin-top:45px; }.drox-section-head--wide { display:block; }.drox-section-head--wide p { margin:25px 0 0; }.mode-grid,.proof-strip,.video-grid,.heritage-panel,.drox-final { grid-template-columns:1fr; }.mode-card { min-height:220px; }.proof-side { display:grid; grid-template-columns:1fr 1fr; align-items:center; }.proof-side > div { padding:18px; }.heritage-panel { gap:40px; }.drox-final > div:first-child { margin-left:0; }.drox-final__mark { flex-direction:row; align-items:center; }.drox-footer { flex-wrap:wrap; }.drox-footer .drox-brand { width:100%; }.drox-footer span:last-child { margin-left:auto; } }
+@media (max-width:520px) { .drox-nav { height:68px; padding:0 18px; }.drox-nav-cta { font-size:9px; }.drox-hero { min-height:735px; background-position:64% center !important; }.drox-hero__inner { width:calc(100% - 34px); }.drox-hero h1 { font-size:48px; }.drox-hero p { font-size:13px; }.drox-command { margin-top:25px; }.drox-chips button { width:100%; text-align:left; }.drox-section { padding:74px 18px; }.drox-section h2 { font-size:51px; }.proof-side { display:block; }.video-grid { gap:27px; }.video-copy h3 { font-size:19px; }.drox-final { padding:80px 18px; }.drox-final h2 { font-size:54px; }.drox-store { min-width:0; flex:1; }.drox-footer { padding:25px 18px; gap:13px; } }
+
+/* Interação de diagnóstico e resposta simulada */
+.drox-command__input { width:100%; border:0; font:inherit; text-align:left; cursor:pointer; }
+.drox-command__input > span { display:flex; flex-direction:column; gap:7px; min-width:0; }
+.drox-command__input small { color:#6f7976; font:9px 'Rajdhani'; letter-spacing:.1em; text-transform:uppercase; }
+.drox-command__input strong { min-height:20px; color:#e7e5de; font:500 13px 'Rajdhani'; font-weight:500; }
+.drox-prompt-caret, .drox-caret { color:#c33d35; font-weight:700; animation:drox-blink .9s steps(1) infinite; }
+@keyframes drox-blink { 50% { opacity:0; } }
+.drox-ai-panel { width:min(560px,100%); margin:14px auto 0; padding:14px; border:1px solid rgba(241,240,234,.24); border-radius:12px; background:rgba(4,6,7,.9); box-shadow:0 20px 55px rgba(0,0,0,.4); text-align:left; backdrop-filter:blur(10px); }
+.drox-ai-panel__head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:4px 2px 13px; color:#9cbc6d; font:9px 'Rajdhani'; letter-spacing:.1em; text-transform:uppercase; }
+.drox-ai-panel__head i { display:inline-block; width:6px; height:6px; margin-right:7px; border-radius:50%; background:#9cbc6d; box-shadow:0 0 0 4px rgba(156,188,109,.15); }
+.drox-ai-panel__head button { border:0; color:#8c9591; background:transparent; font-size:22px; line-height:1; cursor:pointer; }
+.drox-ai-message { display:flex; gap:11px; padding:14px 0 15px; border-top:1px solid rgba(241,240,234,.12); }
+.drox-ai-avatar { flex:none; width:30px; height:30px; overflow:hidden; border-radius:8px; }
+.drox-ai-avatar img { width:100%; height:100%; object-fit:cover; filter:grayscale(1); }
+.drox-ai-message .drox-overline { margin-bottom:8px; color:#b4a071; font-size:8px; }
+.drox-ai-message p { color:#d6d8d2; font-size:12px; line-height:1.6; }
+.drox-ai-notice { display:flex; gap:8px; align-items:flex-start; padding:10px; border:1px solid rgba(200,158,64,.25); color:#c8b98d; background:rgba(200,158,64,.08); font-size:10px; line-height:1.5; }
+.drox-ai-notice svg { flex:none; color:#c89e40; margin-top:1px; }
+.drox-ai-results { display:grid; gap:8px; margin-top:12px; }
+.drox-ai-result { display:grid; grid-template-columns:105px 1fr; gap:12px; padding:11px 0; border-top:1px solid rgba(241,240,234,.1); }
+.drox-ai-result > span { color:#c33d35; font:8px 'Rajdhani'; letter-spacing:.1em; }
+.drox-ai-result > div { min-width:0; }
+.drox-ai-result h3 { color:#f1f0ea; font:500 13px 'Rajdhani'; letter-spacing:-.02em; }
+.drox-ai-result p { margin-top:5px; color:#8c9591; font-size:11px; line-height:1.5; }
+.drox-ai-result--critical > span { color:#e06a52; }.drox-ai-result--high > span { color:#d7a052; }.drox-ai-result--medium > span { color:#b4a071; }.drox-ai-result--low > span { color:#9cbc6d; }
+.drox-ai-footnote { padding-top:11px; border-top:1px solid rgba(241,240,234,.1); color:#8c9591; font-size:10px; line-height:1.55; }
+@media (max-width:520px) { .drox-ai-panel { padding:12px; }.drox-ai-result { grid-template-columns:1fr; gap:5px; }.drox-command__input { padding:14px; } }
+
+
+/* Seção dedicada ao diagnóstico: cresce sem alterar o hero ou as demais seções. */
+.drox-diagnosis-section { padding:clamp(70px,9vw,120px) clamp(22px,7vw,110px); background:#111618; border-top:1px solid rgba(241,240,234,.12); }
+.drox-diagnosis-shell { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr); gap:clamp(35px,8vw,110px); align-items:start; }
+.drox-diagnosis-heading { position:sticky; top:32px; }
+.drox-diagnosis-heading h2 { margin:20px 0; color:#f1f0ea; font:500 clamp(42px,5.4vw,70px)/.94 'Rajdhani'; letter-spacing:-.08em; }
+.drox-diagnosis-heading h2 em { color:#c33d35; font-style:normal; }
+.drox-diagnosis-heading p { max-width:320px; color:#8c9591; font-size:13px; line-height:1.7; }
+.drox-diagnosis-section .drox-ai-panel { width:100%; margin:0; }
+@media (max-width:800px) { .drox-diagnosis-shell { grid-template-columns:1fr; gap:30px; }.drox-diagnosis-heading { position:static; }.drox-diagnosis-heading p { max-width:480px; } }
+
+
+/* O diagnóstico ocupa o mesmo quadro da entrada, sem criar uma nova seção na página. */
+.drox-ai-panel--hero { width:100%; margin:0; padding:0; border:0; box-shadow:none; background:transparent; backdrop-filter:none; }
+.drox-ai-panel--hero .drox-ai-message { padding-top:4px; }
+.drox-ai-close { margin-top:12px; border:1px solid rgba(241,240,234,.2); padding:8px 10px; color:#8c9591; background:transparent; font:10px 'Rajdhani'; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; }
+.drox-ai-close:hover { color:#f1f0ea; border-color:#c33d35; }
+
+
+/* Estado selecionado: o diagnóstico substitui o conteúdo principal sem alterar a altura do hero. */
+.drox-hero__inner--diagnosis { width:min(760px,90vw); }
+.drox-command--diagnosis { width:min(680px,100%); max-height:calc(100svh - 180px); overflow:hidden; }
+.drox-command--diagnosis .drox-ai-panel--hero { max-height:calc(100svh - 245px); overflow-y:auto; scrollbar-width:thin; scrollbar-color:rgba(241,240,234,.28) transparent; }
+.drox-command--diagnosis .drox-ai-panel--hero::-webkit-scrollbar { width:6px; }
+.drox-command--diagnosis .drox-ai-panel--hero::-webkit-scrollbar-thumb { background:rgba(241,240,234,.28); border-radius:10px; }
+@media (max-width:520px) { .drox-hero__inner--diagnosis { width:calc(100% - 34px); }.drox-command--diagnosis { max-height:calc(100svh - 140px); }.drox-command--diagnosis .drox-ai-panel--hero { max-height:calc(100svh - 205px); } }
+/* Refinamento visual clean inspirado na referência DroxApp. Mantém a identidade Alemarco e a lógica existente. */
+.drox-page { overflow-x:hidden; background:#0b0d0e; }
+.drox-nav { border-bottom:0; background:linear-gradient(180deg,rgba(5,7,8,.42),transparent); }
+.drox-nav nav { gap:34px; }
+.drox-nav nav a, .drox-nav-cta { letter-spacing:.07em; }
+.drox-hero__noise { display:none; }
+.drox-hero__inner { width:min(700px,90vw); }
+.drox-hero h1 { font-weight:400; letter-spacing:-.07em; }
+.drox-hero p { max-width:500px; color:rgba(241,240,234,.68); }
+.drox-command { margin-top:34px; padding:8px; border:1px solid rgba(241,240,234,.17); border-radius:18px; background:rgba(11,14,16,.78); box-shadow:0 12px 35px rgba(0,0,0,.2); backdrop-filter:blur(12px); }
+.drox-command__top { padding:9px 12px 11px; }
+.drox-command__input { min-height:64px; border-radius:11px; background:#171b1d; }
+.drox-chips { gap:6px; padding:8px 2px 2px; }
+.drox-chips button { border-color:rgba(241,240,234,.1); color:#959d99; background:rgba(241,240,234,.025); transition:background .18s,border-color .18s,color .18s; }
+.drox-chips button:hover { background:rgba(195,61,53,.1); }
+.drox-section { padding-top:clamp(84px,10vw,138px); padding-bottom:clamp(84px,10vw,138px); }
+.drox-section-head { margin-bottom:58px; }
+.drox-section-head h2, .drox-final h2 { font-weight:400; }
+.drox-modes, .drox-video-section { background:#f4f2ed; }
+.mode-grid { gap:16px; }
+.mode-card { min-height:255px; border:0; border-radius:16px; background:#ebe9e3; padding:26px; }
+.mode-card:hover { transform:translateY(-3px); background:#eeece6; }
+.drox-product { background:#121516; }
+.proof-main, .proof-side { border:0; border-radius:14px; background:#1b2022; }
+.proof-main img, .proof-side img { opacity:.92; }
+.video-frame { border:0; border-radius:14px; }
+.drox-heritage { background:#0b0e0f; }
+.heritage-panel img { border-radius:16px; }
+.drox-final { background:#bd4038; }
+.drox-footer { border-top:1px solid rgba(241,240,234,.08); }
+.drox-ai-panel--hero { padding:2px 3px 4px; }
+.drox-ai-message { border-top:0; padding-top:8px; }
+.drox-ai-notice { border:0; border-radius:9px; background:rgba(200,158,64,.08); }
+.drox-ai-result { border-top-color:rgba(241,240,234,.08); padding:14px 0; }
+.drox-ai-result h3 { font-size:14px; font-weight:500; }
+.drox-ai-result p { color:#a1a9a5; }
+.drox-ai-close { border:0; border-radius:8px; background:rgba(241,240,234,.06); }
+.drox-ai-close:hover { background:rgba(195,61,53,.16); }
+.drox-command--diagnosis { border-radius:18px; }
+@media (max-width:520px) {
+  .drox-hero h1 { font-size:46px; }
+  .drox-command { border-radius:15px; }
+  .mode-card { border-radius:13px; }
+}
