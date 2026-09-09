@@ -106,8 +106,81 @@
 .drox-ai-close { border:0; border-radius:8px; background:rgba(241,240,234,.06); }
 .drox-ai-close:hover { background:rgba(195,61,53,.16); }
 .drox-command--diagnosis { border-radius:18px; }
+@media (min-width:701px) {
+  .alemarco-motor-landing .drox-hero {
+    min-height: 1100px !important;
+    height: 1100px !important;
+    max-height: none !important;
+  }
+  .alemarco-motor-landing .alemarco-consultation-block {
+    top: calc(50% + 270px) !important;
+    bottom: auto !important;
+  }
+}
 @media (max-width:520px) {
   .drox-hero h1 { font-size:46px; }
   .drox-command { border-radius:15px; }
   .mode-card { border-radius:13px; }
+}
+/* Patch estritamente mobile. Nenhuma regra fora do breakpoint altera o desktop. */
+@media (max-width: 700px) {
+  .alemarco-motor-landing .drox-hero {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .alemarco-motor-landing .alemarco-consultation-block {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: block;
+    width: calc(100% - 2rem) !important;
+    max-width: 560px;
+    box-sizing: border-box;
+    margin: 1.25rem auto .75rem !important;
+    padding: 1rem 1.05rem 1.15rem !important;
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif !important;
+  }
+
+  .alemarco-motor-landing .alemarco-consultation-block h3 {
+    margin: 0;
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .alemarco-motor-landing .alemarco-consultation-block p {
+    margin: .65rem 0 0;
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: .76rem;
+    line-height: 1.5;
+  }
+
+  .alemarco-motor-landing .alemarco-consultation-block .drox-nav-cta {
+    display: flex;
+    width: 100%;
+    min-height: 2.65rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin-top: .9rem;
+  }
+
+  .alemarco-motor-landing .drox-scroll {
+    position: relative !important;
+    inset: auto !important;
+    display: flex;
+    width: fit-content;
+    margin: 1.5rem auto 0;
+    z-index: 30;
+  }
 }

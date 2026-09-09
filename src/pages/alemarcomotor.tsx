@@ -71,7 +71,7 @@ function pickSymptoms(items: Symptom[]) {
 
 function VideoSlot({ poster, eyebrow, title, description }: { poster: string; eyebrow: string; title: string; description: string }) {
   const isVideo = poster.endsWith(".mp4");
-  return <article className="video-slot"><div className="video-frame">{isVideo ? <video autoPlay loop muted playsInline preload="metadata" aria-label={title}><source src={poster} type="video/mp4" /></video> : <img src={poster} alt="" />}<div className="video-frame__veil" />{!isVideo && <button type="button" className="video-play" aria-label={`Reproduzir vídeo: ${title}`}><Play size={18} fill="currentColor" /></button>}<span className="video-placeholder">{isVideo ? "VÍDEO EM LOOP" : "VIDEO / ADICIONAR ARQUIVO"}</span></div><div className="video-copy"><span>{eyebrow}</span><h3>{title}</h3><p>{description}</p></div></article>;
+  return <article className="video-slot"><div className="video-frame">{isVideo ? <video autoPlay loop muted playsInline preload="metadata" aria-label={title}><source src={poster} type="video/mp4" /></video> : <img src={poster} alt="" />}<div className="video-frame__veil" />{!isVideo && <button type="button" className="video-play" aria-label={`Reproduzir vídeo: ${title}`}><Play size={18} fill="currentColor" /></button>}<span className="video-placeholder">{isVideo ? "ALEMARCO MOTOR" : "VIDEO / ADICIONAR ARQUIVO"}</span></div><div className="video-copy"><span>{eyebrow}</span><h3>{title}</h3><p>{description}</p></div></article>;
 }
 
  function getVisitorId() {
@@ -275,7 +275,7 @@ export default function Home() {
               return <><h3>{title}{!complete && <b className="drox-caret">▌</b>}</h3>{separator >= 0 && <p>{solution}{!complete && <b className="drox-caret">▌</b>}</p>}</>;
             })()}</div></article>)}{typedResponse.length > 0 && visibleDiagnosisCount >= selectedDiagnoses.length && <p className="drox-ai-footnote">A confirmação exige inspeção adequada. Se o sintoma envolver freios, óleo ou superaquecimento, evite continuar rodando até avaliar o veículo.</p>}</div><button type="button" className="drox-ai-close" onClick={() => setSelectedSymptom(null)} aria-label="Voltar às sugestões">× Voltar</button></div></div> : <><h1>Seu carro sob<br /><em>controle,</em> de verdade.</h1><p>Manutenção, diagnóstico e histórico para quem cuida de carros clássicos com mais segurança e previsibilidade.</p><div className="drox-command"><div className="drox-command__top"><span><i /> Alemarco Motor está pronto</span><span>01 / 04</span></div><button type="button" className="drox-command__input" onClick={() => openDiagnosis(visibleSymptoms[0])} aria-label="Abrir diagnóstico para o sintoma sugerido"><span><small>Descreva o que você quer acompanhar</small><strong>{promptText}<b className="drox-prompt-caret">▌</b></strong></span><ArrowRight size={16} /></button>
             <div className="drox-chips">{visibleSymptoms.map((symptom) => <button key={symptom.id} type="button" onClick={() => openDiagnosis(symptom)}>{symptom.name}</button>)}</div></div></>}</div>
-      {consultationBlocked && <div role="alert" style={{ position: "absolute", zIndex: 20, top: "calc(50% + 270px)", left: "50%", width: "min(92%, 560px)", transform: "translateX(-50%)", padding: "1.25rem 1.5rem", borderRadius: "1rem", background: "rgba(8, 12, 15, .96)", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 80px rgba(0,0,0,.55)", backdropFilter: "blur(16px)", fontFamily: "inherit", color: "inherit" }}><span className="drox-overline">LIMITE GRATUITO ATINGIDO</span><h3>Continue o diagnóstico no app.</h3><p>Você já utilizou as 2 consultas gratuitas. Baixe o Alemarco Motor para continuar acompanhando seu carro.</p><a className="drox-nav-cta" href="#download" onClick={(event) => { event.preventDefault(); document.getElementById("download")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>Baixar o app <ArrowRight size={14} /></a></div>}
+      {consultationBlocked && <div role="alert" className="alemarco-consultation-block" style={{ position: "absolute", zIndex: 20, top: "calc(50% + 270px)", left: "50%", width: "min(92%, 560px)", transform: "translateX(-50%)", padding: "1.25rem 1.5rem", borderRadius: "1rem", background: "rgba(8, 12, 15, .96)", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 80px rgba(0,0,0,.55)", backdropFilter: "blur(16px)", fontFamily: "inherit", color: "inherit" }}><span className="drox-overline">LIMITE GRATUITO ATINGIDO</span><h3>Continue o diagnóstico no app.</h3><p>Você já utilizou as 2 consultas gratuitas. Baixe o Alemarco Motor para continuar acompanhando seu carro.</p><a className="drox-nav-cta" href="#download" onClick={(event) => { event.preventDefault(); document.getElementById("download")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>Baixar o app <ArrowRight size={14} /></a></div>}
       <a className="drox-scroll" href="#modos"><span>Conheça o painel</span><ArrowDown size={15} /></a>
     </section>
 
@@ -294,10 +294,12 @@ export default function Home() {
 
 
 
-    <section id="download" className="drox-final"><div><span className="drox-overline">COMECE AGORA</span><h2>Seu clássico<br />merece este <em>painel.</em></h2>
-<p>Teste o Alemarco Motor por 30 dias e comece a cuidar do seu carro com mais clareza.</p>
+    <section id="download" className="drox-final"><div><span className="drox-overline">COMECE AGORA</span>
+<h2>Seu clássico<br />merece este <em>painel.</em></h2>
+<p>Teste o Alemarco Motor por 30 dias e comece a cuidar do seu carro com mais clareza.</p><br />
 <StoreButtons /></div>
 <div className="drox-final__mark"><img src={icon} alt="" /><span>ALEMARCO MOTOR / 2026</span></div></section>
-    <footer className="drox-footer"><a href="#inicio" className="drox-brand"></a><span>Plataforma digital para antigomobilismo</span><a href="https://alemarcoraridades.com/privacy_amm.html" target="_blank" rel="noreferrer">Privacidade</a><span>© 2025 AleMarco Raridades. Todos os direitos reservados.</span></footer>
+    <footer className="drox-footer"><a href="#inicio" className="drox-brand"></a>
+<a href="https://alemarcoraridades.com/privacidade.html" target="_blank" rel="noreferrer">Privacidade</a><span>© 2026 AleMarco Raridades. Todos os direitos reservados.</span></footer>
   </main>;
 }
