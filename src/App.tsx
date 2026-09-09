@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MotorAP from "./pages/motorap";
-import Upsell from "./pages/Upsell";
+import Upsell from "./pages/upsell";
 import CarroAntigo from "./pages/carroantigo";
-import Upsell_ca from "./pages/Upsell_ca";
+import Upsell_ca from "./pages/upsell_ca";
 import AlemarcoMotor from "./pages/alemarcomotor";
 import "./styles/alemarco-motor-landing.css";
 
