@@ -43,23 +43,35 @@ const modes = [
 ];
 
 function StoreButtons() {
-  
-   return <div className="flex flex-row items-center gap-3 flex-wrap">
-<a className="block h-12 w-[162px] overflow-hidden" href="https://apps.apple.com/br/app/alemarco-motor/id6762020003" target="_blank" rel="noreferrer">
-  <img
-    src= {"https://toolbox.marketingtools.apple.com/api/assets/featured-content/apps/badges/badge-2/en-us.svg"}
-    alt= {"Disponível na App Store"}
-    className="block h-full w-full object-fill"
-  />
-</a>
-<a className="block h-12 w-[162px] overflow-hidden" href="https://play.google.com/store/apps/details?id=com.alemarco.motor" target="_blank" rel="noreferrer">
-  <img
-    src= {"https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"}
-    alt= {"Disponível na Google Play"}
-    className="block h-full w-full scale-[1.30] object-fill"
-  />
-</a>
-</div>;
+  return (
+    <div className="flex flex-row flex-wrap items-center gap-3">
+      <a
+        className="inline-flex items-center"
+        href="https://apps.apple.com/br/app/alemarco-motor/id6762020003"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/en-us.svg"
+          alt="Disponível na App Store"
+          className="block h-[40px] w-auto"
+        />
+      </a>
+
+      <a
+        className="inline-flex items-center"
+        href="https://play.google.com/store/apps/details?id=com.alemarco.motor"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/googleplay-badge-01-getit.width-1440.png"
+          alt="Disponível no Google Play"
+          className="block h-[43px] w-auto"
+        />
+      </a>
+    </div>
+   );
 }
 
 
@@ -145,22 +157,27 @@ export default function Home() {
     setSelectedDiagnoses([]);
 
 
-  const visitorId = getVisitorId();
+  const { data: payload, error } = await supabase.functions.invoke("motor-diagnosis", {
+    body: { symptomId: symptom.id },
+  });
+  const data = payload?.data ?? payload;
 
-  const { data, error } = await supabase.rpc(
-    "get_diagnoses_for_visitor",
-    {
-      p_symptom_id: symptom.id,
-      p_visitor_id: visitorId,
-    }
-  );
 
   if (error) {
+    const errorResponse = "context" in error
+      ? (error as { context?: Response }).context
+      : undefined;
+    const errorBody = errorResponse
+      ? await errorResponse.clone().json().catch(() => null)
+      : null;
+
+
     const errorText = [
       error.message,
       error.details,
       error.hint,
       error.code,
+      JSON.stringify(errorBody),
     ]
       .filter(Boolean)
       .join(" ");
