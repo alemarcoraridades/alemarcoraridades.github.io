@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sonhocarroantigo.com.br/sitemap.xml

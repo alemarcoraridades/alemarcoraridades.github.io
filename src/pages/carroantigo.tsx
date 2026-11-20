@@ -5,7 +5,7 @@ export default function CarroAntigo() {
     <div className="bg-gray-50 text-gray-900">
 
       {/* HERO */}
-      <section className="w-full bg-[url('https://via.placeholder.com/1600x900')] bg-cover bg-center text-white py-24 px-4">
+      <section className="w-full bg-gradient-to-br from-gray-100 via-white to-amber-50 text-white py-24 px-4">
         <div className="max-w-4xl mx-auto text-center drop-shadow-xl">
           <img
             src="/ebook_carro_antigo_tablet.png"
